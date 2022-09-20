@@ -825,6 +825,7 @@ impl Dispatchable for () {
 	type Info = ();
 	type PostInfo = ();
 	fn dispatch(self, _origin: Self::Origin) -> crate::DispatchResultWithInfo<Self::PostInfo> {
+		log::info!("------------------ dispatch ------------------------");
 		panic!("This implemention should not be used for actual dispatch.");
 	}
 }
